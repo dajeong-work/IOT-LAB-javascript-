@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Array(배열)
+    let fruits = ["Banana","Orange","Apple"]
+    // 1. toString() 배열안의 모든 값을 문자열로 가져오기
+    console.log(fruits.toString());
+    console.log(fruits[0].length); 
+    console.log(fruits[1].length);
+    console.log(fruits[2].length);
+    // 반복문으로 ~
+    for(let i=0; i<fruits.length; i++){
+      console.log(fruits[i].length);
+    }
+
+    for (const f of fruits) {
+      console.log(f.length);
+    }
+    // 2. pop() 마지막 값 꺼내오고 제거됨 !..
+    let tail = fruits.pop(); 
+    console.log(tail); // Apple
+    console.log(fruits); // 바나나랑 오렌지만 남음 
+    // 3. push() 추가 
+    // fruits에 kiwi 추가 
+    fruits.push("Kiwi"); // LIFO
+    console.log(fruits);
+    // 4. shift() 첫번째 요소 반환하고 제거 
+    console.log(fruits.shift()); // Banana
+    console.log(fruits); // 오렌지랑 키위만 남음
+    // 5. unshift() 맨 앞에 값 추가하고 길이 반환 
+    console.log(fruits.unshift("Lemon"));
+    // 6. sort()
+    console.log(fruits.sort()); 
+    // 숫자정렬
+    let arr = [40,100,1,5,25,10];
+    // console.log(arr.sort(function(a,b){return a-b})) ; > 오름차순
+    console.log(arr.sort(function(a,b){return b-a})) ; // > 내림차순
+  </script>
+
+</head>
+
+<body>
+
+<div class="container mt-3">
+  <h2>JavaScript</h2>
+  <div class="card">
+    <div class="card-header">ex02</div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">결과화면</div>
+        </div>
+       
+    </div> 
+    <div class="card-footer">사물지능기반 지능제어 서비스 개발자 과정</div>
+  </div>
+</div>
+
+</body>
+</html>

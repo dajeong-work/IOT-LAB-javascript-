@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // 자바스크립트 내장 객체 (클래스)
+    // 1. String(문자열)
+    // 1-1 : length(길이)
+    let str = "ABCDEF" ; // 문자열을 하나의 객체로 취급
+    let len = str.length;
+    console.log(len) ; // 6
+    // 1-2 :"CD" 라는 문자열이 존재하는지? > indexOf()
+    console.log(str.indexOf("CD")); // 시작인덱스 위치 
+    console.log(str.indexOf("CDZ")); // 없으면 -1
+    let str1 = "ABCDEFCD" ;
+    console.log(str1.lastIndexOf("CD")); // 뒤에서부터 찾기
+    // 1-3 : slice()  시작과 종료위치+1 지정 
+    let str2 = "Apple, Banana, Kiwi"; // 바나나 가져오기
+    console.log(str2.slice(7,13));
+    console.log(str2.slice(str2.indexOf("Ba"),13));
+    console.log(str2.slice(7)); // 바나나부터 끝까지 가져오기 (시작만 지정)
+    console.log(str2.slice(-12)); // 뒤에서부터 인덱스번호 
+    // 1-4 : substring() > 음수 사용 x
+    console.log(str2.substring(7,13)) ; // "Banana"
+    // 1-5 : replace()
+    let str3 = "I am a boy\nPlease visit Seoul";
+    console.log(str3.replace("boy","girl")); // "I am a girl"
+    console.log(str3.replace("\n","<br>"));
+    str3 = str3.replace("\n","<br>"); // *replaceAll()
+    str3 = str3.replace("boy","girl");
+    //document.getElementById("title").innerHTML=str3; >> body태그안에서 진행
+    // 1-6 : toUpperCase(), toLowerCase()
+    let str4 = "Hello World"; 
+    console.log(str4.toUpperCase()); // 전부 대문자
+    console.log(str4.toLowerCase()); // 전부 소문자 
+    // 1-7 : 문자열과 문자열 결합 > concat() , +
+    let s1 = "Hello";
+    let s2 = "World";
+    // Hello World 
+    let s3 = s1.concat(" ",s2); // 공백도 넣어주기
+    console.log(s3);
+    // 1-8 : trim() 공백제거
+    let str5 = "                  Hello  World   ";
+    console.log(str5.length);
+    console.log(str5.trim()); // 양쪽 공백 제거 
+    // 1-9 : split() 문자열 분리 
+    let day = "2024-07-24";
+    console.log(day.split("-"));
+    console.log(day.split("")); // 하나씩 분리
+    // 1-10 : charAt(index) 단일문자를 가져오는 함수 
+    console.log(day.charAt(6)) ; // 7
+  </script>
+
+
+</head>
+
+<body>
+
+<div class="container mt-3">
+  <h2 id="title">JavaScript</h2>
+  <!-- id 는 고유값 중복x , class 는 중복이 가능, 주로 css 꾸밀때 사용 -->
+  <div class="card">
+    <div class="card-header">ex02</div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">결과화면</div>
+        </div>
+       
+    </div> 
+    <div class="card-footer">사물지능기반 지능제어 서비스 개발자 과정</div>
+  </div>
+</div>
+<script>
+ document.getElementById("title").innerHTML=str3; 
+</script>
+</body>
+</html>
